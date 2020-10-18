@@ -1,9 +1,8 @@
 from flask import Flask, render_template, request
-import sys, ast, os, json, re
+import sys, ast, os, json, re, string
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 from nltk.tokenize import wordpunct_tokenize
-import string
 from sklearn.feature_extraction.text import TfidfVectorizer
 import pandas as pd
 from scipy import linalg
