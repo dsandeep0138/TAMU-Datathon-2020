@@ -15,7 +15,6 @@ import pandas as pd
 from bs4 import BeautifulSoup
 import requests,lxml
 from selenium import webdriver
-import chromedriver_binary
 
 app = Flask(__name__)
 
@@ -30,7 +29,7 @@ def load_from_csv(filename):
     df = df.drop_duplicates()
     return pd.Series(df.documents.values,index = df.Product_url).to_dict(), df
         
-data_dict, modified_df = load_from_csv("../product_urls_res.csv")
+data_dict, modified_df = load_from_csv("product_urls_res.csv")
 
 def data_processing(data):    #data is a list of lists
     res = []
