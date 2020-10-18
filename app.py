@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-import sys, ast, os, json, re, string
+import sys, ast, os, json, re, string, nltk
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 from nltk.tokenize import wordpunct_tokenize
