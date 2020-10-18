@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Walmart Search Engine</title>
+</head>
+
+<body>
+
+	<h2><center>Product Search</center></h2>
+	<form action="" method="post">
+        <p>
+	    <center>
+            	<label for="query">Query</label>
+            	<input type="text" name="query">
+            </center>
+        </p>
+        <p>
+	    <center>
+            	<input type="submit">
+            </center>
+        </p>
+    </form>
+	
+	<div id="results">
+	    <h3><center>Search Results</center></h3>
+
+	    {% for result in search_results %}
+	    {% set about = result.split('/') %}
+			<div class="card">
+				<center>
+					<!--<a href="{{result}}"><img src="{{image}}" width="250px" height="250px"></a>-->
+					<a href="{{result}}">{{about[-2]}}</a>
+				</center>
+			</div>
+	    {% endfor %}
+
+	</div>
+</body>
+</html>
