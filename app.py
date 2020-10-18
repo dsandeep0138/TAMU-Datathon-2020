@@ -20,6 +20,7 @@ app = Flask(__name__)
 
 #driver = webdriver.Chrome()
 stop_words = set(stopwords.words('english'))
+nltk.data.path.append('nltk_data')
 
 def load_from_csv(filename):
     data_dict = {}
